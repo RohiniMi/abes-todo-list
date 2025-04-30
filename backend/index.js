@@ -24,7 +24,7 @@ app.get("/task", async (req, res) => {
         
         res.status(201).json(data);
     } catch (error) {
-        res.status(500).json({ "data": data });
+        res.status(500).json({ "message":error.message });
     }
 })
 app.put('/task/:id', async (req, res) => {
