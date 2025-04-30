@@ -3,7 +3,7 @@ import axios from 'axios';
 const DeleteTask = ({ index, handleDelete }) => {
     const handeler = async (index) => {
         try {
-            await axios.delete(`http://localhost:7800/task/${index}`);
+            await axios.delete(`https://abes-todo-list.onrender.com/task/${index}`);
             alert("Task deleted successfully.");
             handleDelete(index);
         } catch (error) {

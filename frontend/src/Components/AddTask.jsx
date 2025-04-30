@@ -4,9 +4,9 @@ const AddTask = ({setInputBox,setTask,task,setUpdate,update,handler}) => {
     const addHandler = async() => {        
         if (task.trim() !== "") {
             if (update) {           
-                await axios.put(`http://localhost:7800/task/${update._id}`, { task });
+                await axios.put(`https://abes-todo-list.onrender.com/task/${update._id}`, { task });
             } else {
-                await axios.post("http://localhost:7800/task", { task });
+                await axios.post("https://abes-todo-list.onrender.com/task", { task });
             }
            setInputBox(false);
            setTask("");

@@ -11,7 +11,7 @@ const Todo = () => {
     const [list,setList] = useState([]);
     const handler = async () => {
         try {
-            const res = await axios.get("http://localhost:7800/task");
+            const res = await axios.get("https://abes-todo-list.onrender.com/task");
             setList(res.data);
         }
         catch (error) {
